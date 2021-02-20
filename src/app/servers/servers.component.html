@@ -1,0 +1,27 @@
+<h2>Servers Component starts here!</h2>
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName">
+
+<!--<p>{{serverName}}</p>-->
+
+<button class="btn btn-primary"
+        [disabled]="!disableNewServer"
+        (click)="onCreateServer()">Add Server
+</button>
+
+<div>{{serverCreationStatus}}</div>
+<br>
+
+<p>Person name is: {{personName}}</p>
+<input type="text" class="form-control"
+       placeholder="Write the person name here"
+       [(ngModel)]="personName">
+
+<button class="btn btn-primary"
+        [disabled]="!personName"
+        (click)="onInputClear()">Clear
+</button>
+
+<app-server></app-server>
