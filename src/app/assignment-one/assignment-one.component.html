@@ -1,0 +1,8 @@
+<button class="btn btn-primary"
+        (click)="createAssignment()">
+  Display Details
+</button>
+
+<h3 *ngIf="assignmentCreated">{{assignmentCreationStatus}}</h3>
+<p *ngFor="let assignmentItem of assignments; let i = index"
+   [ngClass]="{'after-five': i >= 4 }">{{assignmentItem}}</p>

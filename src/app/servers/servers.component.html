@@ -11,9 +11,9 @@
         (click)="onCreateServer()">Add Server
 </button>
 
-<div>{{serverCreationStatus}}</div>
-<br>
+<div *ngIf="serverCreated">{{serverCreationStatus}}</div>
 
+<br>
 <p>Person name is: {{personName}}</p>
 <input type="text" class="form-control"
        placeholder="Write the person name here"
@@ -24,4 +24,6 @@
         (click)="onInputClear()">Clear
 </button>
 
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+
+<app-assignment-one></app-assignment-one>
